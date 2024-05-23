@@ -96,8 +96,10 @@ if [[ "${PROMOTION_METHOD}" == "pull_request" ]]; then
     git checkout -B "${BRANCH}"
   fi
 
+  echo "Config git for long paths"
   git config --system core.longpaths true
 
+  echo "git add and show"
   git add .
   git_commit_with_metadata
   git show
@@ -107,6 +109,7 @@ if [[ "${PROMOTION_METHOD}" == "pull_request" ]]; then
     exit 0
   fi
 
+  echo "git push.."
   git push origin "${BRANCH}" -f
   set +e
   PR="$(gh pr view 2>&1)"
