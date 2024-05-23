@@ -96,6 +96,8 @@ if [[ "${PROMOTION_METHOD}" == "pull_request" ]]; then
     git checkout -B "${BRANCH}"
   fi
 
+  git config --system core.longpaths true
+
   git add .
   git_commit_with_metadata
   git show
