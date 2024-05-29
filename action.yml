@@ -116,6 +116,9 @@ inputs:
   pr-unique-key:
     description: this key will be added to all your PR branch names if "aggregate-pr-changes" is set to true
     default: "80514bedee3628f200f6"
+  pr-title:
+    description: Title for the PR if provided
+    required: false
 outputs:
   deployment-repo-sha:
     description: "Git SHA of promotion commit on deployment repo"
@@ -160,3 +163,4 @@ runs:
     DEBUG: ${{ inputs.debug }}
     AGGREGATE_PR_CHANGES: ${{ inputs.aggregate-pr-changes }}
     PR_UNIQUE_KEY: ${{ inputs.pr-unique-key }}
+    PR_TITLE: ${{ inputs.pr-title }}
