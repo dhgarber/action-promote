@@ -89,6 +89,7 @@ echo "charts=$(cat charts.txt)" >> "${GITHUB_OUTPUT}"
 CHARTS_NAMES="$(cat charts.txt)"
 export CHARTS_NAMES
 
+
 # Because the parent workflow is the one who has run the `checkout` action,
 # we need to tell configure git to consider that directory as "safe" in order
 # to be able to commit changes to it without errors. Specifically, the
