@@ -40,7 +40,7 @@ function wait_for_result_not_found {
 
 function git_commit_with_metadata {
   # All of these variables are assumed to have been set by the caller
-  TITLE="${PR_TITLE:-'Promote to ${OVERLAY_NAMES}'"
+  TITLE="${PR_TITLE}"
   METADATA="---
   GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}
   GITHUB_JOB: ${GITHUB_JOB}
