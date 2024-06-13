@@ -159,12 +159,12 @@ def validate_images(images):
         images = list(images.values())
 
     # Ensure that all image names are unique
-    duplicates = find_duplicates(images, "name")
-    if len(duplicates) > 0:
-        logger.fatal(
-            f"Found duplicate image names: {' '.join(duplicates)}. Images must have unique names."
-        )
-        sys.exit(1)
+    # duplicates = find_duplicates(images, "name")
+    # if len(duplicates) > 0:
+    #     logger.fatal(
+    #         f"Found duplicate image names: {' '.join(duplicates)}. Images must have unique names."
+    #     )
+    #     sys.exit(1)
 
     # Ensure that all image newNames are unique
     duplicates = find_duplicates(images, "newName")
